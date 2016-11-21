@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александра Горячева](https://up.htmlacademy.ru/adaptive/9/user/177129).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Антонова](https://htmlacademy.ru/profile/id39082).
 
 ---
 
