@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header page-header--main-page">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-menu">
+          <button class="close-btn close-btn--menu" type="button">Закрыть меню</button>
+          <div class="main-menu__inner">
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a href="index.html" class="main-menu__link">Главная</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link">Фото и видео</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="form.html" class="main-menu__link main-menu__link--active">Форма отзыва</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="https://htmlacademy.ru" class="main-menu__link">HTML Academy</a>
+              </li>
+              <li class="main-menu__item main-menu__logo">
+                <div class="logo">
+                  <a href="index.html" class="logo__link">
+                    <img src="http://placehold.it/102x83" width="102" height="83" alt="City of Sedona" title="City of Sedona">
+                  </a>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+          <div class="page-header__intro-wrapper">
+            <img class="page-header__intro-text" src="http://placehold.it/280x215" width="280" height="40" alt="Welcome to the gorgeous Sedona!">
+          </div>
+      </header>
+
+
+      <main class="page-content">
+
+        <div class="page-caption">
+          <h1 class="page-caption__title">Фото и видео</h1>
+          <p class="page-caption__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+
+        <section class="photos">
+          <h2 class="visually-hidden">Фото</h2>
+
+          <article class="photo-block">
+            <div class="photo-block__image-wrapper"><img src="http://placehold.it/280x280" width="280" height="280" alt="Дорога в Седону" class="photo-block__image"></div>
+            <div class="photo-block__caption">
+              <h3 class="photo-block__title">Неродные просторы</h3>
+              <div class="photo-block__credits">Автор фото:<span class="photo-block__autor-name">Борис</span></div>
+              <div class="likes-count">
+                <span class="likes-count__icon"></span>
+                <span class="likes-count__number">1350</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="photo-block">
+            <div class="photo-block__image-wrapper"><img src="http://placehold.it/280x280" width="280" height="280" alt="Цветущий кактус" class="photo-block__image"></div>
+            <div class="photo-block__caption">
+              <h3 class="photo-block__title">Местная растительность</h3>
+              <div class="photo-block__credits">Автор фото:<span class="photo-block__autor-name">Сергей</span></div>
+              <div class="likes-count">
+                <span class="likes-count__icon"></span>
+                <span class="likes-count__number">143</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="photo-block">
+            <div class="photo-block__image-wrapper"><img src="http://placehold.it/280x280" width="280" height="280" alt="Дорога в горах" class="photo-block__image"></div>
+            <div class="photo-block__caption">
+              <h3 class="photo-block__title">Дорога на север</h3>
+              <div class="photo-block__credits">Автор фото:<span class="photo-block__autor-name">Петр</span></div>
+              <div class="likes-count">
+                <span class="likes-count__icon"></span>
+                <span class="likes-count__number">96</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="photo-block">
+            <div class="photo-block__image-wrapper"><img src="http://placehold.it/280x280" width="280" height="280" alt="Вид на каньон" class="photo-block__image"></div>
+            <div class="photo-block__caption">
+              <h3 class="photo-block__title">Мост Дьявола</h3>
+              <div class="photo-block__credits">Автор фото:<span class="photo-block__autor-name">Антон</span></div>
+              <div class="likes-count">
+                <span class="likes-count__icon"></span>
+                <span class="likes-count__number">254</span>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <section class="videos">
+          <h2 class="visually-hidden">Видео</h2>
+
+          <div class="page-caption">
+            <b class="page-caption__title">Все ещё сомневаетесь?</b>
+            <p class="page-caption__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          </div>
+
+          <article class="video-player">
+            <video src="#" poster="http://placehold.it/320x200"></video>
+            <div class="video-player__controls">
+              <div class="video-player__volume-control">
+                <div class="video-player__volime-scale">
+                  <div class="video-player__volume-slider"></div>
+                </div>
+              </div>
+              <span class="video-player__btn video-player__btn--replay"></span>
+              <span class="video-player__btn video-player__btn--subtitles"></span>
+              <span class="video-player__btn video-player__btn--fullscreen"></span>
+            </div>
+          </article>
+
+        </section>
+
+      </main>
+
+      <footer class="page-footer">
+        <div class="tag">#visitsedona</div>
+        <div class="social">
+          <a href="#" class="social-btn" title="Мы в Twitter">Twitter</a>
+          <a href="#" class="social-btn" title="Мы в Facebook">Facebook</a>
+          <a href="#" class="social-btn" title="Hаш канал на Youtube">Youtube</a>
+        </div>
+        <div class="copyright">
+          <a href="https://htmlacademy.ru">
+            <span class="copyright__text">Разработано</span>
+            <img src="http://placehold.it/27x32" class="copyright__logo" alt="HTML Academy" title="HTML Academy">
+          </a>
+        </div>
+      </footer>
+
+
+    </div>
+
+  </body>
+</html>
