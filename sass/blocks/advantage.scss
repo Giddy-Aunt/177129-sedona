@@ -1,0 +1,32 @@
+.advantage__text-block {
+  padding: 40px 0;
+
+  color: $white;
+
+  background-color: $blue;
+
+}
+
+.advantage__picture {
+  width: 320px;
+  height: 260px;
+}
+
+.advantage__title {
+  @include bold-text($white);
+
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.advantage__number {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.advantage__text {
+  margin: 0;
+}
+
+

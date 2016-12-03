@@ -1,0 +1,36 @@
+.btn {
+  display: block;
+  padding: 16px;
+  margin: 0;
+  width: 100%;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @include btn-style;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+
+  vertical-align: top;
+  font-size: 0;
+
+  @include btn-style;
+}
+
+.social-btn--facebook {
+  width: 47px;
+}

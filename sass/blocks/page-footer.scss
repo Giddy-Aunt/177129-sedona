@@ -1,0 +1,29 @@
+.page-footer {
+  @include paddings;
+
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+
+.page-footer__tag {
+  display: block;
+  margin-bottom: 34px;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.page-footer__copyright a {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-footer__copyright-text {
+  margin-right: 7px;
+}
+
+.page-footer__copyright-logo {
+  vertical-align: middle;
+}

@@ -1,0 +1,22 @@
+.features {
+  margin-top: 8px;
+  margin-bottom: 35px;
+}
+
+.feature {
+  padding-left: 50px;
+  padding-top: 27px;
+  text-align: left;
+}
+
+.feature__title {
+  @include bold-text;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.feature__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}

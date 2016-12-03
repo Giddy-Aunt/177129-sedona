@@ -1,0 +1,173 @@
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text-field {
+  display: table;
+  width: 100%;
+  margin-bottom: 21px;
+
+  text-align: left;
+}
+
+.text-field__input {
+  @include  bold-text;
+  @include  input-style;
+
+  width: 100%;
+  padding: 16px 20px;
+
+  &::-webkit-input-placeholder {
+    @include  bold-text;
+  }
+
+  &::-moz-placeholder {
+    @include  bold-text;
+  }
+
+  &:-moz-placeholder {
+    @include  bold-text;
+  }
+
+  &:-ms-input-placeholder {
+    @include  bold-text;
+  }
+
+  &--inline {
+    display: table-cell;
+  }
+
+  &--icon {
+    border-right: 56px solid $slightly-lighter-grey;
+  }
+
+
+}
+
+.text-field__label {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 20px;
+
+  &--inline {
+    display: table-cell;
+    padding-left: 0;
+    padding-right: 15px;
+  }
+}
+
+.text-field__error-message {
+  padding-left: 20px;
+  margin-top: 5px;
+
+  text-transform: none;
+  color: $alert;
+}
+
+.radio-btn, .checkbox {
+  @include  bold-text;
+
+  position: relative;
+  display: block;
+  padding-left: 80px;
+
+  line-height: 56px;
+  text-align: left;
+  text-transform: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+
+    background-color: $lighter-grey;
+  }
+
+  &:hover::before {
+    background-color: $grey;
+  }
+
+  &:active::before {
+    background-color: $darker-grey;
+  }
+}
+
+.radio-btn {
+  margin-bottom: 13px;
+}
+
+
+.checkbox {
+  margin-bottom: 23px;
+}
+
+.radio-btn {
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+input[type="radio"]:checked +.radio-btn {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: $black;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+input[type="checkbox"]:checked +.checkbox {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    width: 22px;
+    height: 22px;
+    background-color: $black;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.feedback-form__textarea {
+  @include  bold-text;
+  @include input-style
+
+  width: 100%;
+  padding: 18px;
+
+  overflow: hidden;
+
+  &::-webkit-input-placeholder {
+    @include  bold-text;
+  }
+
+  &::-moz-placeholder {
+    @include  bold-text;
+  }
+
+  &:-moz-placeholder {
+    @include  bold-text;
+  }
+
+  &:-ms-input-placeholder {
+    @include  bold-text;
+  }
+
+}

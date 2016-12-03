@@ -1,0 +1,39 @@
+.feedback-form {
+  margin-bottom: 38px;
+}
+
+
+.feedback-form__section {
+  @include paddings;
+
+  border: none;
+  margin: 0;
+  margin-bottom: 3px;
+
+  &--impression {
+    margin-bottom: 16px;
+  }
+}
+
+.feedback-form__section-title {
+  @include grey-border;
+  @include bold-text($black);
+
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding-top: 18px;
+  margin-bottom: 20px;
+
+  &--contacts {
+    margin-bottom: 23px;
+  }
+
+  &--sights {
+    margin-bottom: 18px;
+  }
+}
+
+.btn--feedback-form {
+  margin-top: 38px;
+}

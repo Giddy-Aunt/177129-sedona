@@ -1,0 +1,32 @@
+.main-menu {
+    color: $white;
+
+    background-color: $blue;
+}
+
+.main-menu__list {
+    @include list-reset;
+}
+
+.main-menu__link {
+  @include bold-text(inherit);
+  @include btn-style;
+
+  display: block;
+  padding: 14px 20px;
+
+  text-decoration: none;
+
+  border-top: 1px solid transparentize($white, 0.8);
+  border-bottom: 1px solid transparentize($black, 0.8);
+
+  .main-menu__item:first-child & {
+    border-top: none;
+  }
+
+  .main-menu__item:last-child & {
+    border-bottom: none;
+    box-shadow: 0 -10px 10px -10px transparentize($black, 0.6) inset;
+  }
+}
+

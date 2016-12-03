@@ -1,0 +1,32 @@
+.page-caption {
+  @include paddings;
+
+  margin-top: 35px;
+  margin-bottom: 27px;
+
+  &--main-page {
+    margin-bottom: 42px;
+  }
+
+  &--form-page {
+    margin-bottom: 17px;
+  }
+}
+
+.page-caption__title {
+  @include bold-text(black);
+
+  display: block;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.page-caption__text {
+  margin: 0;
+
+  line-height: 24px;
+
+  &--main-page {
+    line-height: 26px;
+  }
+}

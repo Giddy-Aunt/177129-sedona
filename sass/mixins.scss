@@ -1,0 +1,53 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin bold-text($color: black) {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: $color;
+}
+
+@mixin paddings {
+  padding: 0 20px;
+}
+
+@mixin btn-style {
+  color: $white;
+
+  background-color: $blue;
+
+  &:hover {
+    background-color: $darker-blue;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+
+    background-color: $brighter-blue;
+  }
+}
+
+@mixin input-style {
+  border: none;
+  outline: none;
+  background-color: $lighter-grey;
+
+  &:hover {
+    background-color: $grey;
+  }
+
+  &:focus {
+    background-color: $white;
+    box-shadow: 0 0 0 4px $grey inset;
+  }
+}
+
+
+@mixin grey-border {
+  border-top: 1px solid transparentize($black, 0.9);
+}
