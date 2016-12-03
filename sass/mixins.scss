@@ -21,6 +21,8 @@
 
   background-color: $blue;
 
+  transition: background-color 0.5s;
+
   &:hover {
     background-color: $darker-blue;
   }
@@ -36,6 +38,7 @@
   border: none;
   outline: none;
   background-color: $lighter-grey;
+  transition: background-color 0.5s;
 
   &:hover {
     background-color: $grey;
@@ -47,7 +50,9 @@
   }
 }
 
-
-@mixin grey-border {
-  border-top: 1px solid transparentize($black, 0.9);
+@mixin grey-border($border-position: top) {
+  @if $border-position == top {border-top: 1px solid transparentize($black, 0.9);}
+  @if $border-position == bottom {border-bottom: 1px solid transparentize($black, 0.9);}
+  @if $border-position == left {border-left: 1px solid transparentize($black, 0.9);}
+  @if $border-position == right {border-right: 1px solid transparentize($black, 0.9);}
 }

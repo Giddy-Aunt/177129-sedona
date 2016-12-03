@@ -80,6 +80,7 @@
     height: 56px;
 
     background-color: $lighter-grey;
+    transition: background-color 0.5s;
   }
 
   &:hover::before {
