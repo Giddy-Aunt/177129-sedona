@@ -6,34 +6,39 @@
 .feedback-form__section {
   @include paddings;
 
-  border: none;
+  position: relative;
   margin: 0;
   margin-bottom: 3px;
+  padding-top: 64px;
+
+  border: none;
+  @include grey-border;
+
+  &--contacts {
+    padding-top: 67px;
+  }
 
   &--impression {
     margin-bottom: 16px;
   }
+
+  &--sights {
+    padding-top: 86px;
+  }
 }
 
 .feedback-form__section-title {
-  @include grey-border;
   @include bold-text($black);
 
-  display: block;
+  position: absolute;
+  top: 18px;
+  left: 0;
   width: 100%;
   margin: 0;
-  padding-top: 18px;
-  margin-bottom: 20px;
-
-  &--contacts {
-    margin-bottom: 23px;
-  }
-
-  &--sights {
-    margin-bottom: 18px;
-  }
 }
 
 .btn--feedback-form {
-  margin-top: 38px;
+  margin: 0 20px;
+  margin-top: 36px;
+  width: calc(100% - 40px);
 }

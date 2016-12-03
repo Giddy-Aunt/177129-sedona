@@ -1,9 +1,3 @@
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
 .text-field {
   display: table;
   width: 100%;
@@ -13,26 +7,26 @@ fieldset {
 }
 
 .text-field__input {
-  @include  bold-text;
-  @include  input-style;
+  @include bold-text;
+  @include input-style;
 
   width: 100%;
   padding: 16px 20px;
 
   &::-webkit-input-placeholder {
-    @include  bold-text;
+    @include bold-text;
   }
 
   &::-moz-placeholder {
-    @include  bold-text;
+    @include bold-text;
   }
 
   &:-moz-placeholder {
-    @include  bold-text;
+    @include bold-text;
   }
 
   &:-ms-input-placeholder {
-    @include  bold-text;
+    @include bold-text;
   }
 
   &--inline {
@@ -103,7 +97,7 @@ fieldset {
 
 
 .checkbox {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 .radio-btn {
