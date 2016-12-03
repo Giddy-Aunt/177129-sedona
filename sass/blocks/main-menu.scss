@@ -1,11 +1,11 @@
 .main-menu {
-    color: $white;
+  color: $white;
 
-    background-color: $blue;
+  background-color: $blue;
 }
 
 .main-menu__list {
-    @include list-reset;
+  @include list-reset;
 }
 
 .main-menu__link {
@@ -29,4 +29,3 @@
     box-shadow: 0 -10px 10px -10px transparentize($black, 0.6) inset;
   }
 }
-
