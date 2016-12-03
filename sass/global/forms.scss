@@ -13,6 +13,14 @@
   width: 100%;
   padding: 16px 20px;
 
+  &--inline {
+    display: table-cell;
+  }
+
+  &--icon {
+    border-right: 56px solid $slightly-lighter-grey;
+  }
+
   &::-webkit-input-placeholder {
     @include bold-text;
   }
@@ -28,16 +36,6 @@
   &:-ms-input-placeholder {
     @include bold-text;
   }
-
-  &--inline {
-    display: table-cell;
-  }
-
-  &--icon {
-    border-right: 56px solid $slightly-lighter-grey;
-  }
-
-
 }
 
 .text-field__label {
@@ -72,12 +70,8 @@
   text-transform: none;
 
   &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 56px;
-    height: 56px;
+    @include absolute-pseudo-element(0, 0);
+    @include size(56px);
 
     background-color: $lighter-grey;
     transition: background-color 0.5s;
@@ -94,27 +88,26 @@
 
 .radio-btn {
   margin-bottom: 13px;
-}
 
-
-.checkbox {
-  margin-bottom: 24px;
-}
-
-.radio-btn {
   &::before {
     border-radius: 50%;
   }
 }
 
+
+.checkbox {
+  margin-bottom: 24px;
+
+  &::before {
+    border-radius: 5px;
+  }
+}
+
 input[type="radio"]:checked +.radio-btn {
   &::after {
-    content: "";
-    position: absolute;
-    left: 17px;
-    top: 17px;
-    width: 22px;
-    height: 22px;
+    @include absolute-pseudo-element(17px, 17px);
+    @include size(22px);
+
     border-radius: 50%;
     background-color: $black;
   }
@@ -126,12 +119,9 @@ input[type="radio"]:checked +.radio-btn {
 
 input[type="checkbox"]:checked +.checkbox {
   &::after {
-    content: "";
-    position: absolute;
-    left: 17px;
-    top: 17px;
-    width: 22px;
-    height: 22px;
+    @include absolute-pseudo-element(17px, 17px);
+    @include size(22px);
+
     background-color: $black;
   }
 

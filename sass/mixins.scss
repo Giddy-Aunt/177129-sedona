@@ -6,7 +6,7 @@
 }
 
 @mixin bold-text($color: black) {
-  font-size: 18px;
+  font-size: $font-size-bold;
   font-weight: bold;
   line-height: 26px;
   color: $color;
@@ -55,4 +55,18 @@
   @if $border-position == bottom {border-bottom: 1px solid transparentize($black, 0.9);}
   @if $border-position == left {border-left: 1px solid transparentize($black, 0.9);}
   @if $border-position == right {border-right: 1px solid transparentize($black, 0.9);}
+}
+
+@mixin absolute-pseudo-element($top: auto,  $left: auto, $bottom: auto, $right: auto) {
+  content: "";
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
 }
