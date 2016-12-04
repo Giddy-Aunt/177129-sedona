@@ -1,0 +1,13 @@
+.page-header__intro-wrapper {
+  @include paddings;
+
+  padding-top: 50px;
+  padding-bottom: 65px;
+
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+}
+
+.page-header__intro-wrapper--main-page {
+  padding-top: 90px;
+  padding-bottom: 85px;
+}

@@ -1,0 +1,72 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin bold-text($color: black) {
+  font-size: $font-size-bold;
+  font-weight: bold;
+  line-height: 26px;
+  color: $color;
+}
+
+@mixin paddings {
+  padding: 0 20px;
+}
+
+@mixin btn-style {
+  color: $white;
+
+  background-color: $blue;
+
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $darker-blue;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+
+    background-color: $brighter-blue;
+  }
+}
+
+@mixin input-style {
+  border: none;
+  outline: none;
+  background-color: $lighter-grey;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $grey;
+  }
+
+  &:focus {
+    background-color: $white;
+    box-shadow: 0 0 0 4px $grey inset;
+  }
+}
+
+@mixin grey-border($border-position: top) {
+  @if $border-position == top {border-top: 1px solid transparentize($black, 0.9);}
+  @if $border-position == bottom {border-bottom: 1px solid transparentize($black, 0.9);}
+  @if $border-position == left {border-left: 1px solid transparentize($black, 0.9);}
+  @if $border-position == right {border-right: 1px solid transparentize($black, 0.9);}
+}
+
+@mixin absolute-pseudo-element($top: auto,  $left: auto, $bottom: auto, $right: auto) {
+  content: "";
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

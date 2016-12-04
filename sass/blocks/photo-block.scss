@@ -1,0 +1,33 @@
+.photo-block {
+  @include paddings;
+  @include grey-border;
+
+  padding-top: 23px;
+  margin-bottom: 18px;
+}
+
+.photo-block__caption {
+  text-align: left;
+}
+
+.photo-block__image-wrapper {
+  margin-bottom: 10px;
+}
+
+.photo-block__title {
+  color: $black;
+  font-size: 1em;
+
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.photo-block__credits {
+  text-transform: none;
+
+  margin-bottom: 12px;
+}
+
+.photo-block__autor-name {
+  margin-left: 3px;
+}

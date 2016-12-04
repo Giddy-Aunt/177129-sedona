@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+
+  font-weight: normal;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-size: $font-size;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
