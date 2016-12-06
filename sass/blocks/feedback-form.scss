@@ -1,31 +1,95 @@
 .feedback-form {
-  margin-bottom: 38px;
+  padding-bottom: 38px;
+
+  @media #{$tablet-widths} {
+    padding: $tablet-padding;
+    padding-bottom: 38px;  }
+
+  @media #{$desktop-widths} {
+    padding: $desktop-padding;
+    padding-bottom: 38px;
+  }
 }
 
 
 .feedback-form__section {
-  @include paddings;
-
   position: relative;
   margin: 0;
   margin-bottom: 3px;
+  padding: $mobile-padding;
   padding-top: 64px;
+  display: block;
 
   border: none;
   @include grey-border;
 
+  @media #{$tablet-widths} {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--name {
+  @media #{$tablet-widths} {
+    float: right;
+    width: 50%;
+    padding-left: 20px;
+  }
+
+  @media #{$desktop-widths} {
+    width: 50%;
+  }
+  }
+
   &--contacts {
     padding-top: 67px;
+
+    @media #{$tablet-widths} {
+      width: 100%;
+      float: left;
+    }
   }
 
   &--impression {
     margin-bottom: 16px;
+
+  @media #{$tablet-widths} {
+    margin-right: $tablet-width / 2  - 60px;
+    @include grey-border (right);
+  }
+
   }
 
   &--sights {
     padding-top: 86px;
+    clear: both;
+
+    @media #{$tablet-widths} {
+      @include clearfix;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 36px;
   }
 }
+
+.feedback-form__section--sights .checkbox {
+  @media #{$tablet-widths} {
+    width: 50%;
+    &:nth-of-type(2n+1) {
+      float: left;
+    }
+    &:nth-of-type(2n) {
+      float: right;
+    }
+  }
+
+  @media #{$desktop-widths} {
+    width: 25%;
+    float: left;
+  }
+}
+
 
 .feedback-form__section-title {
   @include bold-text($black);
@@ -35,10 +99,38 @@
   left: 0;
   width: 100%;
   margin: 0;
+
+  @media #{$tablet-widths} {
+    position: static;
+
+    &--tablet-full-width {
+    width: 400px;
+    padding: 0 50px;
+    }
+
+  }
 }
 
 .btn--feedback-form {
-  margin: 0 20px;
-  margin-top: 36px;
+  margin: $mobile-padding;
   width: calc(100% - 40px);
+
+  @media #{$tablet-widths} {
+    width: 50%;
+    margin: 0;
+    float: right;
+
+  }
+}
+
+.feedback-form__note {
+  display: none;
+
+  @media #{$tablet-widths} {
+    display: block;
+    text-align: right;
+    width: 50%;
+    float: right;
+
+  }
 }

@@ -1,15 +1,49 @@
+.advantage {
+  @media #{$tablet-widths} {
+    @include clearfix;
+  }
+}
+
 .advantage__text-block {
-  padding: 40px 0;
+  padding: 40px 20px;
 
   color: $white;
 
   background-color: $blue;
 
+  @include column(3);
+
+  @media #{$tablet-widths} {
+    min-height: 256px;
+
+    &--float-right {
+      float: right;
+    }
+  }
 }
 
 .advantage__picture {
   width: 320px;
   height: 260px;
+
+  @media #{$tablet-widths} {
+    height: 256px;
+    width: 512px;
+    float: left;
+
+  &--float-right {
+      float: right;
+    }
+  }
+
+  @media #{$desktop-widths} {
+    width: 800px;
+  }
+}
+
+.advantage__picture img {
+  width: 100%;
+  height: 100%;
 }
 
 .advantage__title {

@@ -1,0 +1,10 @@
+.photos {
+
+  @media #{$tablet-widths} {
+    padding: $tablet-padding;
+  }
+
+  @media #{$desktop-widths} {
+    padding: 0;
+  }
+}

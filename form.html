@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link  rel="stylesheet" href="css/style.css">
-</head>
+  </head>
   <body>
     <header class="page-header">
       <button class="nav-toggle" type="button">Открыть меню</button>
@@ -47,10 +48,10 @@
 
       <form action="#" method="get" class="feedback-form">
 
-        <fieldset class="feedback-form__section">
+        <fieldset class="feedback-form__section feedback-form__section--name">
           <legend class="feedback-form__section-title">Представьтесь:</legend>
           <div class="text-field  text-field--name">
-            <label for="feedback-firstname" class="text-field__label  text-field__label--inline">Имя<sup><sup>&lowast;</sup></sup>:</label>
+            <label for="feedback-firstname" class="text-field__label  text-field__label--inline">Имя<sup>&lowast;</sup>:</label>
             <input type="text" class="text-field__input  text-field__input--inline" name="feedback-firstname" id="feedback-firstname" placeholder="Петр" required>
           </div>
           <div class="text-field  text-field--name">
@@ -63,8 +64,8 @@
           </div>
         </fieldset>
 
-      <fieldset class="feedback-form__section feedback-form__section--contacts">
-        <legend class="feedback-form__section-title feedback-form__section-title">Контактная информация:</legend>
+      <fieldset class="feedback-form__section  feedback-form__section--contacts">
+        <legend class="feedback-form__section-title  feedback-form__section-title--tablet-full-width">Контактная информация:</legend>
         <div class="text-field text-field--contacts">
           <label for="feedback-phone" class="text-field__label">Контактный телефон<sup>&lowast;</sup>:</label>
           <input type="tel" class="text-field__input  text-field__input--icon  text-field__input--phone" name="feedback-phone" id="feedback-phone" placeholder="Введите телефон" required>
@@ -86,8 +87,8 @@
         <label class="radio-btn" for="feedback-impression-none">Затрудняюсь ответить</label>
       </fieldset>
 
-      <fieldset class="feedback-form__section feedback-form__section--sights">
-        <legend class="feedback-form__section-title">Посещенные достопримечательности:</legend>
+      <fieldset class="feedback-form__section  feedback-form__section--sights">
+        <legend class="feedback-form__section-title  feedback-form__section-title--tablet-full-width">Посещенные достопримечательности:</legend>
         <input type="checkbox" class="visually-hidden" name="sight-devil-brige" id="sight-devil-brige" value="sight-devil-brige">
         <label class="checkbox" for="sight-devil-brige">Мост Дьявола</label>
         <input type="checkbox" class="visually-hidden" name="sight-slide-park" id="sight-slide-park" value="sight-slide-park">
@@ -98,11 +99,14 @@
         <label class="checkbox" for="sight-rocks">Красные скалы</label>
       </fieldset>
 
-      <fieldset class="feedback-form__section comment-field">
-        <legend class="feedback-form__section-title">Опишите свои эмоции:</legend>
+      <fieldset class="feedback-form__section feedback-form__section--comment">
+        <legend class="feedback-form__section-title  feedback-form__section-title--tablet-full-width">Опишите свои эмоции:</legend>
         <textarea class="feedback-form__textarea" name="feedback-comment" id="feedback-comment" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
-      <button class="btn btn--feedback-form" type="submit">Отправить отзыв</button>
+      <div class="clearfix">
+        <div class="feedback-form__note"><sup>&lowast;</sup>Обязательные поля</div>
+        <button class="btn btn--feedback-form" type="submit">Отправить отзыв</button>
+      </div>
 
       </form>
 

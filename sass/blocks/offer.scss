@@ -1,8 +1,15 @@
 .offer {
-  @include paddings;
-
+  padding: $mobile-padding;
+  width: 320px;
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
+
+  @media #{$tablet-widths} {
+    width: 480px;
+  }
+
+
 }
 
 .offer__caption {

@@ -1,5 +1,12 @@
 .amenities {
-  @include paddings;
-
   background-color: $bg-grey;
+}
+
+.amenities__inner {
+  padding: $mobile-padding;
+
+  @media #{$tablet-widths} {
+    padding: 0;
+    @include clearfix;
+  }
 }

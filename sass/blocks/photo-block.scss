@@ -1,18 +1,90 @@
-.photo-block {
-  @include paddings;
-  @include grey-border;
+.photos {
+  text-align: left;
 
-  padding-top: 23px;
-  margin-bottom: 18px;
+  @media #{$tablet-widths} {
+    font-size: 0;
+    margin-bottom: 18px;
+  }
 }
 
+
+
+.photo-block {
+  @include grey-border;
+
+  padding: $mobile-padding;
+  padding-top: 23px;
+  margin-bottom: 18px;
+
+  @media #{$tablet-widths} {
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    padding: 0;
+    margin:0;
+    width: $tablet-width / 2 - 60px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  @media #{$desktop-widths} {
+    position: relative;
+    width: $desktop-width / 3;
+  }
+}
+
+.photo-block img {
+  width: 100%;
+  display: block;
+}
+
+
 .photo-block__caption {
-  text-align: left;
+  font-size: 1rem;
+
+  @media #{$tablet-widths} {
+    @include clearfix;
+    padding: 20px;
+    background-color: $lighter-grey;
+
+    .photo-block:nth-child(2n+3) & {
+      background-color: $bg-photo-block-grey;
+    }
+  }
+
+  @media #{$desktop-widths} {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: $white;
+
+    background-color: transparentize($black, 0.7);
+
+    .photo-block:nth-child(2n+3) & {
+      background-color: transparentize($black, 0.7);
+    }
+  }
 }
 
 .photo-block__image-wrapper {
   margin-bottom: 10px;
+
+  @media #{$tablet-widths} {
+    margin: 0;
+  }
 }
+
+
+.photo-block__text-wrapper {
+  @media #{$tablet-widths} {
+    float: left;
+    width: calc(100% - 66px);
+  }
+}
+
 
 .photo-block__title {
   color: $black;
@@ -20,7 +92,13 @@
 
   margin: 0;
   margin-bottom: 2px;
+
+  @media #{$desktop-widths} {
+    bottom: 0;
+    color: $white;
+  }
 }
+
 
 .photo-block__credits {
   text-transform: none;
@@ -30,4 +108,13 @@
 
 .photo-block__autor-name {
   margin-left: 3px;
+}
+
+.likes-count {
+  @media #{$tablet-widths} {
+    float: right;
+    width: 66px;
+    padding: 10px 0;
+    padding-left: 35px;
+  }
 }

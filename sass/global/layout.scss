@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  width: 320px;
+  min-width: 320px;
 
   font-weight: normal;
   font-family: "PT Sans", "Tahoma", sans-serif;
@@ -13,7 +13,7 @@ body {
   text-align: center;
   color: #333333;
 
-  background-color: #ffffff;
+  background-color: $lighter-grey;
 }
 
 *,
@@ -24,10 +24,27 @@ body {
 
 .visually-hidden {
   position: absolute;
-  top: auto;
-  left: -10000px;
 
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.page-content {
+  @include container;
+  padding-left: 0;
+  padding-right: 0;
+
+  background-color: $white;
+}
+
+
+.clearfix {
+  @include clearfix;
 }

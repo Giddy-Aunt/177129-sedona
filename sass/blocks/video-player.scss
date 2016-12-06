@@ -1,19 +1,35 @@
 .video-player {
-  padding-top: 5px;
-  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media #{$tablet-widths} {
+    position: relative;
+  }
 }
 
 .video-player__video {
   display: block;
+  width: 100%;
 }
 
 .video-player__controls {
   position: relative;
   z-index: 100;
-  margin: 0 20px;
+  margin: $mobile-padding;
   height: 66px;
 
   background-color: $lighter-grey;
+
+  @media #{$tablet-widths} {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    height: 93px;
+
+    background-color: transparentize($black, 0.4);
+  }
 }
 
 .video-player__volume-control {
@@ -25,6 +41,12 @@
   padding-bottom: 20px;
 
   background-color: transparentize($black, 0.4);
+
+  @media #{$tablet-widths} {
+    position: static;
+    background-color: transparent;
+    padding: 45px;
+  }
 }
 
 .video-player__volime-scale {
