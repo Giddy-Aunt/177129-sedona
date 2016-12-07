@@ -48,3 +48,9 @@ body {
 .clearfix {
   @include clearfix;
 }
+
+.non-desktop {
+  @media #{$desktop-widths} {
+    display: none;
+  }
+}

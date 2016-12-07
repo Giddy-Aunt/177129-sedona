@@ -61,5 +61,25 @@
     background-color: $white;
     border-top: none;
     border-bottom: none;
+
+    &--active {
+      color: #766357;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &--active:hover {
+      color: #604e43;
+    }
+
+    &:active {
+      color: transparentize($black, 0.7);
+    }
+
+    &--active:active {
+      color: transparentize(#766357, 0.7);
+    }
   }
 }

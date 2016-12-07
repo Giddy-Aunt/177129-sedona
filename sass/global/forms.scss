@@ -66,6 +66,11 @@
     right: 0;
     top: 0;
   }
+
+  @media #{$desktop-widths} {
+    left: 85px;
+    top: -30px;
+  }
 }
 
 .radio-btn, .checkbox {
