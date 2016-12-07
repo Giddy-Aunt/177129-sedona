@@ -12,10 +12,6 @@
   color: $color;
 }
 
-@mixin paddings {
-  padding: 0 20px;
-}
-
 @mixin btn-style {
   color: $white;
 
@@ -69,4 +65,37 @@
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
+}
+
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media #{$tablet-widths} {
+    width: $tablet-width;
+  }
+
+  @media #{$desktop-widths} {
+    width: $desktop-width;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin column($number) {
+  @media #{$tablet-widths} {
+    float: left;
+    width: $tablet-width / $number;
+  }
+
+  @media #{$desktop-widths} {
+    width: $desktop-width / $number;
+  }
 }

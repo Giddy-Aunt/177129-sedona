@@ -1,7 +1,9 @@
 .page-caption {
-  @include paddings;
+  padding: $mobile-padding;
+  padding-top: 35px;
+  margin: 0 auto;
+  max-width: 550px;
 
-  margin-top: 35px;
   margin-bottom: 27px;
 
   &--main-page {

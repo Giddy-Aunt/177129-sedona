@@ -4,6 +4,10 @@
   margin-bottom: 21px;
 
   text-align: left;
+
+  @media #{$tablet-widths} {
+    position: relative;
+  }
 }
 
 .text-field__input {
@@ -56,6 +60,17 @@
 
   text-transform: none;
   color: $alert;
+
+  @media #{$tablet-widths} {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @media #{$desktop-widths} {
+    left: 85px;
+    top: -30px;
+  }
 }
 
 .radio-btn, .checkbox {

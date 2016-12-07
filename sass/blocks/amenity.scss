@@ -4,6 +4,20 @@
   &:not(:first-child) {
     @include grey-border;
   }
+
+  @include column(3);
+
+  @media #{$tablet-widths} {
+    padding: 45px 60px;
+
+    &:not(:first-child) {
+      border: none;
+    }
+
+    &:first-child {
+      padding: 45px 50px;
+    }
+  }
 }
 
 .amenity__title {

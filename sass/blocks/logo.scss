@@ -1,4 +1,10 @@
 .logo {
   height: 83px;
   margin-bottom: -27px;
+
+  background-color: $white;
+
+  @media #{$tablet-widths} {
+    margin-top: -56px;
+  }
 }

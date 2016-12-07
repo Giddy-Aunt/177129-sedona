@@ -1,13 +1,26 @@
-.page-header__intro-wrapper {
-  @include paddings;
+.page-header {
+  @include container;
+  padding: 0;
+  background-color: $lighter-grey;
+}
 
+.page-header__intro-wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 65px;
 
-  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background: $blue url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .page-header__intro-wrapper--main-page {
   padding-top: 90px;
   padding-bottom: 85px;
+}
+
+.page-header__intro-text {
+  display: block;
+  margin: 0 auto;
 }

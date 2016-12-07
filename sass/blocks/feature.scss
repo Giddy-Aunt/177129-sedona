@@ -1,12 +1,28 @@
 .features {
+  padding: $mobile-padding;
   margin-top: 8px;
   margin-bottom: 35px;
+
+  @media #{$tablet-widths} {
+    @include clearfix;
+    padding: 0;
+  }
 }
 
 .feature {
   padding-left: 50px;
   padding-top: 27px;
+
   text-align: left;
+
+  @include column(3);
+
+  @media #{$tablet-widths} {
+    padding: 0 40px;
+    padding-top: 160px;
+
+    text-align: center;
+  }
 }
 
 .feature__title {
