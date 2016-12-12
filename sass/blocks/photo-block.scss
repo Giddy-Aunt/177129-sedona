@@ -1,37 +1,38 @@
-.photos {
-  text-align: left;
-
-  @media #{$tablet-widths} {
-    font-size: 0;
-    margin-bottom: 18px;
-  }
-}
-
-
 
 .photo-block {
-  @include grey-border;
+  width: 100%;
 
-  padding: $mobile-padding;
-  padding-top: 23px;
-  margin-bottom: 18px;
+  @media #{$mobile-only} {
+    @include grey-border;
+    padding: $mobile-padding;
+    padding-top: 23px;
+    margin-bottom: 10px;
+
+    &:last--of-type {
+      padding-bottom: 10px;
+      margin-bottom: 0;
+      @include grey-border(bottom);
+    }
+  }
 
   @media #{$tablet-widths} {
-    display: inline-block;
-    vertical-align: top;
-    border: none;
-    padding: 0;
-    margin:0;
-    width: $tablet-width / 2 - 60px;
+    & img {
+      height: 267px;
+    }
 
-    &:first-child {
-      width: 100%;
+    &:first-of-type img {
+      min-height: 400px;
+    }
+    &:not(:first-of-type) {
+      width: 50%;
     }
   }
 
   @media #{$desktop-widths} {
     position: relative;
-    width: $desktop-width / 3;
+    &:not(:first-of-type) {
+      width: 33.33%;
+    }
   }
 }
 
@@ -43,13 +44,16 @@
 
 .photo-block__caption {
   font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 
   @media #{$tablet-widths} {
-    @include clearfix;
-    padding: 20px;
+    padding: 16px 20px;
     background-color: $lighter-grey;
 
-    .photo-block:nth-child(2n+3) & {
+    .photo-block:nth-of-type(2n+3) & {
       background-color: $bg-photo-block-grey;
     }
   }
@@ -60,35 +64,31 @@
     right: 0;
     bottom: 0;
     color: $white;
-
-    background-color: transparentize($black, 0.7);
-
-    .photo-block:nth-child(2n+3) & {
+    .photo-block:nth-of-type(n) & {
       background-color: transparentize($black, 0.7);
     }
   }
 }
 
 .photo-block__image-wrapper {
-  margin-bottom: 10px;
-
-  @media #{$tablet-widths} {
-    margin: 0;
+  @media #{$mobile-only} {
+    margin-bottom: 15px;
   }
 }
 
 
 .photo-block__text-wrapper {
+  width: 100%;
+
   @media #{$tablet-widths} {
-    float: left;
-    width: calc(100% - 66px);
+    width: calc(100% - 70px);
   }
 }
 
 
 .photo-block__title {
   color: $black;
-  font-size: 1em;
+  font-size: 14px;
 
   margin: 0;
   margin-bottom: 2px;
@@ -102,19 +102,9 @@
 
 .photo-block__credits {
   text-transform: none;
-
-  margin-bottom: 12px;
 }
 
 .photo-block__autor-name {
   margin-left: 3px;
 }
 
-.likes-count {
-  @media #{$tablet-widths} {
-    float: right;
-    width: 66px;
-    padding: 10px 0;
-    padding-left: 35px;
-  }
-}

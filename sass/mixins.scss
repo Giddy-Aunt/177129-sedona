@@ -68,15 +68,12 @@
 }
 
 @mixin container {
-  width: 320px;
-  margin: 0 auto;
-
-  @media #{$tablet-widths} {
-    width: $tablet-width;
-  }
+  min-width: 320px;
+  width: auto;
 
   @media #{$desktop-widths} {
-    width: $desktop-width;
+  max-width: $desktop-width;
+  margin: 0 auto;
   }
 }
 

@@ -1,4 +1,7 @@
 .photos {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
 
   @media #{$tablet-widths} {
     padding: $tablet-padding;
@@ -8,3 +11,4 @@
     padding: 0;
   }
 }
+

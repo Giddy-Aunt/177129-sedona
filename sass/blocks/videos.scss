@@ -1,10 +1,12 @@
 .videos {
-  padding-top: 5px;
   padding-bottom: 40px;
 
   @media #{$tablet-widths} {
     padding: $tablet-padding;
-    padding-top: 5px;
-    padding-bottom: 40px;
+    padding-bottom: 42px;
+  }
+
+  @media #{$desktop-widths} {
+    padding-bottom: 88px;
   }
 }

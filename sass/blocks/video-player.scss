@@ -10,6 +10,11 @@
 .video-player__video {
   display: block;
   width: 100%;
+  object-fit: cover;
+
+  @media #{$tablet-widths} {
+    height: 500px;
+  }
 }
 
 .video-player__controls {

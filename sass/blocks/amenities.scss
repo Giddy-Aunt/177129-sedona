@@ -7,6 +7,10 @@
 
   @media #{$tablet-widths} {
     padding: 0;
-    @include clearfix;
+    display: flex;
+  }
+
+  @media #{$desktop-widths} {
+    padding-bottom: 22px;
   }
 }
