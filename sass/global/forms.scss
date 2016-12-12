@@ -69,15 +69,15 @@
   color: $alert;
 
   @media #{$tablet-widths} {
-   position: absolute;
-   width: auto;
-   top: 0;
-   right: 0;
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 0;
   }
 
   @media #{$desktop-widths} {
-   top: -35px;
-   right: auto;
+    top: -35px;
+    right: auto;
   }
 
   .text-field--invalid & {

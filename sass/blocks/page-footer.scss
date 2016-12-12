@@ -1,13 +1,11 @@
 .page-footer {
   background-color: $lighter-grey;
-  min-height: 120px;
 }
 
 .page-footer__inner {
   @include container;
-
   padding-top: 32px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
