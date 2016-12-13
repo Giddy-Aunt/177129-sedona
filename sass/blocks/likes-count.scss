@@ -1,7 +1,12 @@
 .likes-count {
+  width: 100%;
   padding: 9px 0;
   padding-left: 35px;
 
   font-size: $font-size;
   font-weight: bold;
+
+  @media #{$tablet-widths} {
+    width: 70px;
+  }
 }
