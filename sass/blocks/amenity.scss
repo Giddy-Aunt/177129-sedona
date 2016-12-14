@@ -34,6 +34,8 @@
 .amenity__number {
   display: block;
   margin-bottom: 15px;
+  @include lines-on-sides(6px, $text-color, 0, 9px);
+  justify-content: center;
 
   @media #{$tablet-widths} {
     margin-bottom: 20px;
