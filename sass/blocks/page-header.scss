@@ -1,6 +1,5 @@
 .page-header {
   @include container;
-  padding: 0;
   background-color: $lighter-grey;
 }
 
@@ -8,16 +7,28 @@
   max-width: $desktop-width;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 65px;
+  padding-bottom: 68px;
 
   background: $blue url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-}
 
-.page-header__intro-wrapper--main-page {
-  padding-top: 90px;
-  padding-bottom: 85px;
+  @media #{$tablet-widths} {
+    min-height: 290px;
+  }
+
+  @media #{$desktop-widths} {
+    min-height: 300px;
+  }
+
+  &--main-page {
+    padding-top: 90px;
+    padding-bottom: 85px;
+
+    @media #{$tablet-widths} {
+      min-height: 520px;
+    }
+  }
 }
 
 .page-header__intro-text {

@@ -68,15 +68,12 @@
 }
 
 @mixin container {
-  width: 320px;
-  margin: 0 auto;
-
-  @media #{$tablet-widths} {
-    width: $tablet-width;
-  }
+  min-width: 320px;
+  width: auto;
 
   @media #{$desktop-widths} {
-    width: $desktop-width;
+  max-width: $desktop-width;
+  margin: 0 auto;
   }
 }
 
@@ -97,5 +94,31 @@
 
   @media #{$desktop-widths} {
     width: $desktop-width / $number;
+  }
+}
+
+@mixin lines-on-sides($margin, $lines-color, $flex-grow: 1, $lines-width: auto) {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '';
+
+    flex-grow: $flex-grow;
+
+    width: $lines-width;
+    height: 2px;
+
+    background: $lines-color;
+  }
+
+  &::before {
+    margin-right: $margin;
+  }
+
+  &::after {
+    margin-left: $margin;
   }
 }

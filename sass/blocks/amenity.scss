@@ -5,17 +5,13 @@
     @include grey-border;
   }
 
-  @include column(3);
 
   @media #{$tablet-widths} {
-    padding: 45px 60px;
+    padding: 45px 50px;
+    width: 33.33%;
 
     &:not(:first-child) {
       border: none;
-    }
-
-    &:first-child {
-      padding: 45px 50px;
     }
   }
 }
@@ -25,11 +21,25 @@
 
   margin: 0;
   margin-bottom: 9px;
+
+  @media #{$tablet-widths} {
+    font-size: $font-size-big;
+  }
+
+  @media #{$desktop-widths} {
+    padding: 0 90px;
+  }
 }
 
 .amenity__number {
   display: block;
   margin-bottom: 15px;
+  @include lines-on-sides(6px, $text-color, 0, 9px);
+  justify-content: center;
+
+  @media #{$tablet-widths} {
+    margin-bottom: 20px;
+  }
 }
 
 .amenity__text {

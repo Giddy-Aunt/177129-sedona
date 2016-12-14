@@ -1,12 +1,24 @@
 .text-field {
-  display: table;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 21px;
 
   text-align: left;
 
+  &--inline {
+    flex-direction: row;
+    align-items: center;
+  }
+
   @media #{$tablet-widths} {
     position: relative;
+  }
+
+  &--invalid {
+    @media #{$mobile-only} {
+      margin-bottom: 13px;
+    }
   }
 }
 
@@ -14,12 +26,9 @@
   @include bold-text;
   @include input-style;
 
+  display: block;
   width: 100%;
   padding: 16px 20px;
-
-  &--inline {
-    display: table-cell;
-  }
 
   &--icon {
     border-right: 56px solid $slightly-lighter-grey;
@@ -43,39 +52,45 @@
 }
 
 .text-field__label {
-  display: block;
-  margin-bottom: 10px;
   padding-left: 20px;
+  line-height: 26px;
+  margin-bottom: 8px;
 
   &--inline {
-    display: table-cell;
     padding-left: 0;
     padding-right: 15px;
+    margin: 0;
   }
 }
 
 .text-field__error-message {
+  display: none;
   padding-left: 20px;
-  margin-top: 5px;
+  margin-top: 6px;
+  width: 100%;
 
   text-transform: none;
   color: $alert;
 
   @media #{$tablet-widths} {
     position: absolute;
-    right: 0;
+    width: auto;
     top: 0;
+    right: 0;
   }
 
   @media #{$desktop-widths} {
-    left: 85px;
-    top: -30px;
+    top: -35px;
+    right: auto;
+  }
+
+  .text-field--invalid & {
+    display: block;
   }
 }
 
 .radio-btn, .checkbox {
   @include  bold-text;
-
   position: relative;
   display: block;
   padding-left: 80px;
@@ -107,14 +122,22 @@
   &::before {
     border-radius: 50%;
   }
+
+  @media #{$tablet-widths} {
+    margin-bottom: 23px;
+  }
 }
 
 
 .checkbox {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   &::before {
     border-radius: 5px;
+  }
+
+  @media #{$tablet-widths} {
+    margin-bottom: 30px;
   }
 }
 
@@ -169,5 +192,4 @@ input[type="checkbox"]:checked +.checkbox {
   &:-ms-input-placeholder {
     @include  bold-text;
   }
-
 }

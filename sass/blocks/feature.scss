@@ -1,35 +1,32 @@
-.features {
-  padding: $mobile-padding;
-  margin-top: 8px;
-  margin-bottom: 35px;
-
-  @media #{$tablet-widths} {
-    @include clearfix;
-    padding: 0;
-  }
-}
-
 .feature {
   padding-left: 50px;
   padding-top: 27px;
 
   text-align: left;
 
-  @include column(3);
-
   @media #{$tablet-widths} {
     padding: 0 40px;
-    padding-top: 160px;
+    padding-top: 105px;
+    width: 33.33%;
 
     text-align: center;
+
+    &:nth-child(2) {
+      order: 1;
+    }
   }
 }
 
 .feature__title {
-  @include bold-text;
-
   margin-top: 0;
   margin-bottom: 15px;
+
+  @include bold-text;
+
+  @media #{$tablet-widths} {
+    margin-bottom: 20px;
+    font-size: $font-size-big;
+  }
 }
 
 .feature__text {

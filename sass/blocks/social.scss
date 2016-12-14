@@ -1,7 +1,12 @@
 .social {
   margin-bottom: 40px;
+  width: 100%;
+  padding: $mobile-padding;
 
   font-size: 0;
 
-  @include column(3);
+  @media #{$tablet-widths} {
+    width: 33.33%;
+    margin: 0;
+  }
 }

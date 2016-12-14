@@ -1,6 +1,7 @@
 .advantage {
   @media #{$tablet-widths} {
-    @include clearfix;
+    display: flex;
+    flex-drection: row;
   }
 }
 
@@ -11,33 +12,27 @@
 
   background-color: $blue;
 
-  @include column(3);
-
   @media #{$tablet-widths} {
     min-height: 256px;
+    width: 33.33%;
+    padding: 40px;
+  }
 
-    &--float-right {
-      float: right;
-    }
+  @media #{$desktop-widths} {
+    padding: 50px 60px;
   }
 }
 
+.advantage__text-block--float-right {
+  order: 1;
+}
+
 .advantage__picture {
-  width: 320px;
   height: 260px;
 
   @media #{$tablet-widths} {
     height: 256px;
-    width: 512px;
-    float: left;
-
-  &--float-right {
-      float: right;
-    }
-  }
-
-  @media #{$desktop-widths} {
-    width: 800px;
+    flex-grow: 1;
   }
 }
 
@@ -51,12 +46,25 @@
 
   margin-top: 0;
   margin-bottom: 8px;
+
+  @media #{$tablet-widths} {
+    font-size: $font-size-big;
+  }
+  @media #{$desktop-widths} {
+    padding: 0 45px;
+  }
 }
 
 .advantage__number {
   display: block;
   margin-top: 0;
   margin-bottom: 15px;
+  @include lines-on-sides(6px, white, 0, 9px);
+  justify-content: center;
+
+  @media #{$tablet-widths} {
+    margin-bottom: 22px;
+  }
 }
 
 .advantage__text {
