@@ -1,6 +1,7 @@
 .advantage {
   @media #{$tablet-widths} {
     display: flex;
+    flex-drection: row;
   }
 }
 
@@ -58,6 +59,9 @@
   display: block;
   margin-top: 0;
   margin-bottom: 15px;
+  @include lines-on-sides(6px, white, 0, 9px);
+  justify-content: center;
+
   @media #{$tablet-widths} {
     margin-bottom: 22px;
   }

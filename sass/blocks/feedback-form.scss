@@ -36,8 +36,6 @@
   }
 
   @media #{$tablet-widths} {
-    @include grey-border(top);
-
     &--name {
       width: 50%;
       padding: $tablet-padding;
@@ -46,8 +44,7 @@
     }
 
     &--contacts {
-      margin-top: 30px;
-      margin-bottom: 32px;
+      margin-top: 5px;
     }
 
     &--impression {
@@ -57,11 +54,11 @@
     }
 
     &--sights {
-      margin-bottom: 40px;
+      margin-bottom: 12px;
     }
 
     &--comment {
-      margin-bottom: 45px;
+      margin-bottom: 47px;
     }
   }
 
@@ -69,11 +66,9 @@
     &--name {
       padding-left: 80px;
     }
-    &--contacts {
-      margin-top: 27px;
-    }
     &--sights {
-      margin-bottom: 35px;
+      margin-top: -5px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -118,23 +113,22 @@
 
 
 .feedback-form__section-title {
-  width: 100%;
-  padding-top: 18px;
+  margin: 0;
 
   @include bold-text($black);
 
   @media #{$mobile-only} {
     @include grey-border(top);
+    padding-top: 18px;
   }
 
   @media #{$tablet-widths} {
-    padding-top: 25px;
+    margin-top: 25px;
     font-size: $font-size-big;
 
     &--tablet-full-width {
-      width: 400px;
-      padding: 0 50px;
-
+      @include lines-on-sides(0, transparentize($black, 0.9), 0, calc(50% - 200px));
+      justify-content: space-between;
     }
 
     &--tablet-half-width {
@@ -173,7 +167,6 @@
 
 .feedback-form__section--sights .checkbox {
   @media #{$tablet-widths} {
-    //width: 200px;
     width: 44%;
 
     &--bell {
@@ -194,8 +187,13 @@
 }
 
 .text-field--contacts {
+  @media #{$tablet-widths} {
+    flex-direction: column;
+  }
 
   @media #{$desktop-widths} {
+    flex-direction: row;
+    align-items: center;
     width: 50%;
 
     &:nth-child(1) {
@@ -204,12 +202,7 @@
   }
 
   & .text-field__label {
-    width: 100%;
-    @media #{$tablet-widths} {
-      width: 50%;
-    }
     @media #{$desktop-widths} {
-      width: auto;
       padding-left: 0;
       padding-right: 15px;
       margin: 0;
