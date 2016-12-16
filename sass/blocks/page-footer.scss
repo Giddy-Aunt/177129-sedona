@@ -64,5 +64,14 @@
 }
 
 .page-footer__copyright-logo {
+  @include size(37px, 48px);
   vertical-align: middle;
+  fill: $black;
+
+  &:hover {
+    fill: $blue;
+  }
+  &:active {
+    fill: $icons-grey;
+  }
 }

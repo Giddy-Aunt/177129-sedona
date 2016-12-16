@@ -160,7 +160,7 @@ input[type="checkbox"]:checked +.checkbox {
     @include absolute-pseudo-element(17px, 17px);
     @include size(22px);
 
-    background-color: $black;
+    background: url("../img/icon-tick.svg") no-repeat center;
   }
 
   &:active::after {
