@@ -2,7 +2,6 @@
   //padding: 9px 0;
   display: flex;
   align-items: center;
-  //padding-left: 35px;
 
   font-size: $font-size;
   font-weight: bold;
@@ -12,7 +11,7 @@
   }
 }
 
-.likes-count__icon {
+.icon-btn--likes-count {
   display: block;
   margin-right: 15px;
   cursor: pointer;

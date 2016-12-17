@@ -43,7 +43,11 @@
       </nav>
       <div class="logo">
         <a href="index.html" class="logo__link">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona" title="City of Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona" title="City of Sedona">
+          </picture>
         </a>
       </div>
       <div class="page-header__intro-wrapper">
@@ -85,12 +89,16 @@
         <div class="feedback-form__section__inner feedback-form__section__inner--contacts">
           <div class="text-field text-field--contacts text-field--invalid">
             <label for="feedback-phone" class="text-field__label"><span class="non-desktop">Контактный </span>телефон<sup>&lowast;</sup>:</label>
-            <input type="tel" class="text-field__input  text-field__input--icon  text-field__input--phone" name="feedback-phone" id="feedback-phone" placeholder="Введите телефон" required>
+            <div class="text-field__input-wrapper  text-field__input-wrapper--icon  text-field__input-wrapper--phone">
+              <input type="tel" class="text-field__input" name="feedback-phone" id="feedback-phone" placeholder="Введите телефон" required>
+            </div>
             <div class="text-field__error-message">Ошибка, перепроверьте номер</div>
           </div>
           <div class="text-field text-field--contacts">
             <label for="feedback-email" class="text-field__label">Электронная&nbsp;почта<sup>&lowast;</sup>:</label>
-            <input type="email" class="text-field__input  text-field__input--icon  text-field__input--email" name="feedback-email" id="feedback-email" placeholder="Введите e-mail" required>
+            <div class="text-field__input-wrapper  text-field__input-wrapper--icon  text-field__input-wrapper--email">
+              <input type="email" class="text-field__input  text-field__input--icon  text-field__input--email" name="feedback-email" id="feedback-email" placeholder="Введите e-mail" required>
+            </div>
           </div>
         </div>
       </fieldset>
@@ -153,7 +161,9 @@
         <div class="page-footer__copyright">
           <a href="https://htmlacademy.ru">
             <span class="page-footer__copyright-text">Разработано</span>
-            <img src="img/logo-htmlacademy.svg" class="page-footer__copyright-logo" alt="HTML Academy" title="HTML Academy">
+            <svg class="page-footer__copyright-logo" width="37px" height="48px"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#htmlacademy"></use></svg>
+            <!--<img src="img/logo-htmlacademy.svg" class="page-footer__copyright-logo" alt="HTML Academy" title="HTML Academy">
+          -->
           </a>
         </div>
       </div>

@@ -25,6 +25,7 @@ $desktop-width: 1200px;
 $tablet-widths: "(min-width: #{$tablet-width})";
 $desktop-widths: "(min-width: #{$desktop-width})";
 $mobile-only: "(max-width: #{$tablet-width - 1px})";
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
 $mobile-padding: 0 (20px / $mobile-width * 100%);
 $tablet-padding: 0 (60px / $tablet-width * 100%);

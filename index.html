@@ -44,7 +44,11 @@
       </nav>
       <div class="logo">
         <a class="logo__link">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona" title="City of Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona" title="City of Sedona">
+          </picture>
         </a>
       </div>
       <div class="page-header__intro-wrapper page-header__intro-wrapper--main-page">
@@ -71,8 +75,12 @@
             <span class="advantage__number">№ 1</span>
             <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <div class="advantage__picture advantage__picture--float-right">
-            <img src="http://placehold.it/320x260" width="320" height="260" alt="Гостиница в Седоне">
+          <div class="advantage__picture-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../img/photo-city@1x.jpg 1x, ../img/photo-city@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/photo-city-tablet@1x.jpg 1x, ../img/photo-city-tablet@2x.jpg 2x">
+              <img class="advantage__img" src="../img/photo-city-mobile@1x.jpg" srcset="../img/photo-city-mobile@2x.jpg 2x" alt="Вид на город">
+            </picture>
           </div>
         </div>
 
@@ -92,13 +100,17 @@
         </div>
 
         <div class="advantage">
-          <div class ="advantage__text-block advantage__text-block--float-right">
+          <div class ="advantage__text-block advantage__text-block--align-right">
             <h3 class="advantage__title">Там есть мост Дьявола</h3>
             <span class="advantage__number">№ 2</span>
             <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <div class="advantage__picture">
-            <img src="http://placehold.it/320x260" width="320" height="260" alt="Вид на каньон">
+          <div class="advantage__picture-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../img/photo-bridge@1x.jpg 1x, ../img/photo-bridge@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/photo-bridge-tablet@1x.jpg 1x, ../img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="advantage__img" src="../img/photo-bridge-mobile@1x.jpg" srcset="../img/photo-bridge-mobile@2x.jpg 2x" alt="Вид на каньон">
+            </picture>
           </div>
         </div>
 

@@ -7,26 +7,42 @@
   max-width: $desktop-width;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 68px;
 
-  background: $blue url("../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-position: center;
+  background-color: $blue;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
+
+  @media #{$retina} {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 
   @media #{$tablet-widths} {
     min-height: 290px;
+    padding-top: 100px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media #{$retina} {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   @media #{$desktop-widths} {
     min-height: 300px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media #{$retina} {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   &--main-page {
     padding-top: 90px;
-    padding-bottom: 85px;
 
     @media #{$tablet-widths} {
       min-height: 520px;
+      padding-top: 80px;
     }
   }
 }
@@ -34,4 +50,12 @@
 .page-header__intro-text {
   display: block;
   margin: 0 auto;
+
+  @media #{$tablet-widths} {
+  @include size(460px, 80px);
+
+    &--main-page {
+      height: 350px;
+    }
+  }
 }
