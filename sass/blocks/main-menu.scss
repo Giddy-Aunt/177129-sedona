@@ -15,7 +15,6 @@
 
   @media #{$tablet-widths} {
     display: flex;
-    //justify-content: space-around;
   }
 }
 
@@ -84,3 +83,17 @@
     }
   }
 }
+
+@media #{$mobile-only} {
+
+  .main-menu--closed .main-menu__list {
+    display: none;
+  }
+
+  .main-menu--open .main-menu__list,
+  .main-menu--no-js .main-menu__list {
+    display: block;
+  }
+
+}
+
