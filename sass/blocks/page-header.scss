@@ -1,18 +1,31 @@
 .page-header {
   @include container;
-  background-color: $lighter-grey;
+  background-color: $white;
 }
 
 .page-header__intro-wrapper {
   max-width: $desktop-width;
   margin: 0 auto;
   padding-top: 50px;
+  padding-bottom: 85px;
+  z-index: 0;
 
   background-color: $blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  background-position: center;
+  position: relative;
+
+    &::before {
+      @include absolute-pseudo-element(auto, 0, 0, 0);
+      height: 57px;
+      width: 100%;
+      background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
+      background-position: center bottom;
+      background-size: 1200px;
+    }
 
   @media #{$retina} {
     background-image: url("../img/bg-back-mobile@2x.jpg");

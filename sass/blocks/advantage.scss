@@ -7,10 +7,14 @@
 
 .advantage__text-block {
   padding: 40px 20px;
-
   color: $white;
 
   background-color: $blue;
+  @media #{$mobile-only} {
+    &--triangle {
+      padding-top: 75px;
+    }
+  }
 
   @media #{$tablet-widths} {
     min-height: 256px;
