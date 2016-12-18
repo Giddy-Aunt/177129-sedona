@@ -147,7 +147,8 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Седона на карте</h2>
-        <div class="contacts__map contacts__map--no-js"></div>
+        <div class="contacts__map contacts__map--no-js" id="map">
+        </div>
       </section>
 
     </main>
@@ -179,6 +180,10 @@
         </div>
       </div>
     </footer>
+  <script src="js/map.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBayCvZ3aFtyZFbPlQy_pHqDw4A2Mkuvo&callback=initMap">
+  </script>
 
   </body>
 </html>
