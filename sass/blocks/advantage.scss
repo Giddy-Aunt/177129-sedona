@@ -7,10 +7,14 @@
 
 .advantage__text-block {
   padding: 40px 20px;
-
   color: $white;
 
   background-color: $blue;
+  @media #{$mobile-only} {
+    &--triangle {
+      padding-top: 75px;
+    }
+  }
 
   @media #{$tablet-widths} {
     min-height: 256px;
@@ -23,12 +27,15 @@
   }
 }
 
-.advantage__text-block--float-right {
+.advantage__text-block--align-right {
   order: 1;
 }
 
-.advantage__picture {
+.advantage__picture-wrapper {
   height: 260px;
+
+  overflow: hidden;
+  font-size: 0;
 
   @media #{$tablet-widths} {
     height: 256px;
@@ -36,9 +43,10 @@
   }
 }
 
-.advantage__picture img {
+.advantage__img {
+  height: auto;
   width: 100%;
-  height: 100%;
+  //object-fit: cover;
 }
 
 .advantage__title {

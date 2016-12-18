@@ -1,8 +1,6 @@
 .page-caption {
   padding: 0 20px;
   padding-top: 40px;
-  margin: 0 auto;
-  max-width: 550px;
   margin-bottom: 25px;
 
   @media #{$tablet-widths} {
@@ -16,7 +14,20 @@
   }
 
   &--main-page {
-    margin-bottom: 45px;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+
+    @media #{$mobile-only} {
+      position: relative;
+      &::before {
+        @include absolute-pseudo-element(auto, 0, -36px, 0);
+        height: 37px;
+        width: 100%;
+        background: url("../img/bg-triangle.svg") no-repeat;
+        background-position: center bottom;
+        background-size: 768px;
+      }
+    }
     @media #{$tablet-widths} {
       padding-top: 48px;
       margin-bottom: 49px;
@@ -47,7 +58,16 @@
   }
 }
 
+.page-caption__inner {
+  max-width: 380px;
+  margin: 0 auto;
+    @media #{$tablet-widths} {
+      max-width: 550px;
+    }
+}
+
 .page-caption__title {
+  margin: 0;
   @include bold-text(black);
 
   display: block;
@@ -66,7 +86,6 @@
 
 .page-caption__text {
   margin: 0;
-
   line-height: 24px;
 
   &--main-page {

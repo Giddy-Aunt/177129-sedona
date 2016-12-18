@@ -26,6 +26,7 @@
   margin-right: 6px;
 
   vertical-align: top;
+  line-height: 48px;
   font-size: 0;
 
   @include btn-style;
@@ -33,4 +34,28 @@
 
 .social-btn--facebook {
   width: 47px;
+}
+
+.social-btn__svg-icon {
+  vertical-align: middle;
+  fill: $white;
+  .social-btn:active & {
+    opacity: 0.3;
+  }
+}
+
+.icon-btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

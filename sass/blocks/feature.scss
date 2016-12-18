@@ -4,6 +4,22 @@
 
   text-align: left;
 
+  background-repeat: no-repeat;
+  background-position:left 18px;
+  background-size: 14%;
+
+  &--accomodation {
+    background-image: url(../img/icon-house.svg);
+  }
+
+    &--souvenirs {
+    background-image: url(../img/icon-gift.svg);
+  }
+
+    &--food {
+    background-image: url(../img/icon-burger.svg);
+  }
+
   @media #{$tablet-widths} {
     padding: 0 40px;
     padding-top: 105px;
@@ -11,7 +27,10 @@
 
     text-align: center;
 
-    &:nth-child(2) {
+    background-position: top center;
+    background-size: auto;
+
+    &--souvenirs  {
       order: 1;
     }
   }

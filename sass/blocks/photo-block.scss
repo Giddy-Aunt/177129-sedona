@@ -16,13 +16,6 @@
   }
 
   @media #{$tablet-widths} {
-    & img {
-      height: 267px;
-    }
-
-    &:first-of-type img {
-      min-height: 400px;
-    }
     &:not(:first-of-type) {
       width: 50%;
     }
@@ -36,9 +29,22 @@
   }
 }
 
-.photo-block img {
+.photo-block__image-wrapper {
+  overflow: hidden;
+  font-size: 0;
+
+  @media #{$tablet-widths} {
+      height: 267px;
+    .photo-block:first-of-type & {
+      height: 400px;
+    }
+  }
+}
+
+.photo-block__img {
+  height: 100%;
   width: 100%;
-  display: block;
+  object-fit: cover;
 }
 
 

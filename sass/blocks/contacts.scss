@@ -1,7 +1,42 @@
 .contacts__map {
   min-height: 350px;
 
-  background: url("../img/bg-map-mobile@1x.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
+  &--no-js {
+    background-image: url("../img/bg-map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      @include absolute-pseudo-element(50%, 50%);
+      @include size(27px);
+      border-radius: 50%;
+      background-color: $blue;
+      border: 5px solid $white;
+      transform: translate(-50%,-50%);
+    }
+
+    @media #{$retina} {
+      background-image: url("../img/bg-map-mobile@2x.jpg");
+    }
+
+    @media #{$tablet-widths} {
+      background-image: url("../img/bg-map-tablet@1x.jpg");
+
+      @media #{$retina} {
+        background-image: url("../img/bg-map-tablet@2x.jpg");
+      }
+
+    }
+
+    @media #{$desktop-widths} {
+      background-image: url("../img/bg-map-desktop@1x.jpg");
+
+      @media #{$retina} {
+        background-image: url("../img/bg-map-desktop@2x.jpg");
+      }
+
+    }
+  }
 }

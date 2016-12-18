@@ -44,7 +44,7 @@
   @media #{$tablet-widths} {
     width: 33.33%;
     text-align: right;
-    padding-right: 60px;
+    padding-right: 55px;
   }
 
   @media #{$desktop-widths} {
@@ -59,10 +59,15 @@
   text-decoration: none;
 }
 
-.page-footer__copyright-text {
-  margin-right: 7px;
-}
-
 .page-footer__copyright-logo {
+  @include size(40px, 53px);
   vertical-align: middle;
+  fill: $black;
+
+  &:hover {
+    fill: $blue;
+  }
+  &:active {
+    fill: $icons-grey;
+  }
 }

@@ -1,5 +1,61 @@
 .nav-toggle {
-    font-size:0;
-    position: absolute;
+  @include absolute-pseudo-element(17px, auto, auto, 20px);
+  margin: 0;
+  padding: 0;
+  @include size(24px);
+  z-index: 1000;
+
+  font-size: 0;
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+
+  &::before,
+  &::after {
+    @include absolute-pseudo-element(10px, -2px);
+    @include size(28px, 4px);
+    background: $white;
+    transition: transform 0.5s;
+  }
+
+  .main-menu--closed & {
+    background: $blue;
+    @include size(23px, 21px);
+
+    &::after {
+      transform: none;
+      width: 23px;
+      left: 0;
+      top: 4px;
+    }
+
+    &::before {
+      transform: none;
+      width: 23px;
+      left: 0;
+      top: 13px;
+    }
+  }
+
+  .main-menu--opened & {
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-menu--no-js & {
     display: none;
+  }
+
+  @media #{$tablet-widths} {
+    display: none;
+  }
+
 }
