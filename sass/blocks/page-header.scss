@@ -1,6 +1,7 @@
 .page-header {
   @include container;
   background-color: $white;
+  box-shadow: 0 5px 15px 0 transparentize($black, 0.8);
 }
 
 .page-header__intro-wrapper {

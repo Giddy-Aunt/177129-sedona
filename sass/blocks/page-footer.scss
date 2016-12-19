@@ -12,6 +12,7 @@
   flex-wrap: wrap;
 
   background-color: $white;
+  box-shadow: 0 5px 15px 0 transparentize($black, 0.8);
 }
 
 .page-footer__tag {
