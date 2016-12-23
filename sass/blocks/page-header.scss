@@ -8,7 +8,7 @@
   max-width: $desktop-width;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 85px;
+  padding-bottom: 67px;
   z-index: 0;
 
   background-color: $blue;
@@ -24,8 +24,8 @@
       height: 57px;
       width: 100%;
       background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
-      background-position: center bottom;
-      background-size: 1200px;
+      background-position: center 1px;
+      background-size: 1201px;
     }
 
   @media #{$retina} {
@@ -55,8 +55,8 @@
     padding-top: 90px;
 
     @media #{$tablet-widths} {
-      min-height: 520px;
-      padding-top: 80px;
+      min-height: 517px;
+      padding-top: 77px;
     }
   }
 }

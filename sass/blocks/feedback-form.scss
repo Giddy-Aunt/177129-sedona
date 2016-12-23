@@ -127,7 +127,7 @@
     font-size: $font-size-big;
 
     &--tablet-full-width {
-      @include lines-on-sides(0, transparentize($black, 0.9), 0, calc(50% - 200px));
+      @include lines-on-sides(0, transparentize($black, 0.9), 0, calc(50% - 200px), 1px);
       justify-content: space-between;
     }
 
