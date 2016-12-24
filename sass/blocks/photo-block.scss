@@ -6,7 +6,7 @@
     @include grey-border;
     padding: $mobile-padding;
     padding-top: 23px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 
     &:last--of-type {
       padding-bottom: 10px;
@@ -85,6 +85,9 @@
 
 .photo-block__text-wrapper {
   flex-grow: 1;
+  @media #{$mobile-only} {
+    margin-bottom: 10px;
+  }
 }
 
 

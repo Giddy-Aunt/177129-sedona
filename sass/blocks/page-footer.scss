@@ -60,8 +60,12 @@
   text-decoration: none;
 }
 
+.page-footer__copyright-text {
+  margin-right: 10px;
+}
+
 .page-footer__copyright-logo {
-  @include size(40px, 53px);
+  @include size(27px, 36px);
   vertical-align: middle;
   fill: $black;
 
