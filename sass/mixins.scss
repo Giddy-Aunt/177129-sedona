@@ -97,7 +97,7 @@
   }
 }
 
-@mixin lines-on-sides($margin, $lines-color, $flex-grow: 1, $lines-width: auto) {
+@mixin lines-on-sides($margin, $lines-color, $flex-grow: 1, $lines-width: auto, $lines-height: 2px) {
   display: flex;
   align-items: center;
   text-align: center;
@@ -109,7 +109,7 @@
     flex-grow: $flex-grow;
 
     width: $lines-width;
-    height: 2px;
+    height: $lines-height;
 
     background: $lines-color;
   }

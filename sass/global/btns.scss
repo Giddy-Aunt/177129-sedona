@@ -1,3 +1,15 @@
+@keyframes pulsate {
+    0% {
+        background: #5496bd;
+    }
+    50% {
+        background: #3e84ae;
+    }
+    100% {
+        background: #5496bd;
+    }
+}
+
 .btn {
   display: block;
   padding: 16px;
@@ -17,6 +29,22 @@
   cursor: pointer;
 
   @include btn-style;
+
+  &:disabled,
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:active,{
+    background: $disabled-color;
+  }
+
+  &--progress,
+  &--progress:hover,
+  &--progress:active,{
+    animation-name: pulsate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }
 
 .social-btn {

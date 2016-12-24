@@ -12,6 +12,7 @@
   flex-wrap: wrap;
 
   background-color: $white;
+  box-shadow: 0 5px 15px 0 transparentize($black, 0.8);
 }
 
 .page-footer__tag {
@@ -59,8 +60,12 @@
   text-decoration: none;
 }
 
+.page-footer__copyright-text {
+  margin-right: 10px;
+}
+
 .page-footer__copyright-logo {
-  @include size(40px, 53px);
+  @include size(27px, 36px);
   vertical-align: middle;
   fill: $black;
 
