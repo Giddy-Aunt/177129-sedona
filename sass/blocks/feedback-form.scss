@@ -185,6 +185,8 @@
 }
 
 .feedback-form__checkbox-wrapper {
+  margin-bottom: 23px;
+
   @media #{$tablet-widths} {
     width: 44%;
     margin-left: 30px;
