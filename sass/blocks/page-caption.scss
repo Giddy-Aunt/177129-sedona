@@ -3,21 +3,23 @@
   padding-top: 40px;
   margin-bottom: 25px;
 
-  @media #{$tablet-widths} {
-    padding-top: 75px;
-    margin-bottom: 70px;
-  }
-
-  @media #{$desktop-widths} {
-    padding-top: 113px;
-    margin-bottom: 70px;
-  }
 
   &--main-page {
     margin-bottom: 0;
     padding-bottom: 8px;
+  }
 
-    @media #{$mobile-only} {
+  &--form-page {
+    margin-bottom: 15px;
+  }
+
+  &--videos {
+    padding-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  @media #{$mobile-only} {
+    &--main-page {
       position: relative;
       &::before {
         @include absolute-pseudo-element(auto, 0, -36px, 0);
@@ -28,30 +30,41 @@
         background-size: 768px;
       }
     }
-    @media #{$tablet-widths} {
+  }
+
+  @media #{$tablet-widths} {
+    padding-top: 75px;
+    margin-bottom: 70px;
+
+    &--main-page {
       padding-top: 52px;
       margin-bottom: 40px;
     }
-  }
 
-  &--form-page {
-    margin-bottom: 15px;
-    @media #{$tablet-widths} {
-      margin-bottom: 49px;
+    &--form-page {
+      margin-bottom: 73px;
     }
-    @media #{$desktop-widths} {
-      margin-bottom: 35px;
-    }
-  }
 
-  &--videos {
-  padding-top: 35px;
-  margin-bottom: 35px;
-    @media #{$tablet-widths} {
+    &--videos {
       padding-top: 68px;
       margin-bottom: 75px;
     }
-    @media #{$desktop-widths} {
+  }
+
+  @media #{$desktop-widths} {
+    padding-top: 113px;
+    margin-bottom: 70px;
+
+    &--main-page {
+      padding-top: 52px;
+      margin-bottom: 40px;
+    }
+
+    &--form-page {
+      margin-bottom: 35px;
+    }
+
+    &--videos {
       padding-top: 70px;
       margin-bottom: 73px;
     }

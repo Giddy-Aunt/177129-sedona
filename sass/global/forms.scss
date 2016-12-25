@@ -45,13 +45,16 @@
   &:-ms-input-placeholder {
     @include bold-text;
   }
+
+  &--icon {
+    padding-right: 60px;
+  }
 }
 
 .text-field__input-wrapper {
   width: 100%;
 
   &--icon {
-    padding-right: 52px;
     position: relative;
     &::after {
       @include absolute-pseudo-element(0, auto, 0, 0);
@@ -72,6 +75,10 @@
     &::after {
       background-image: url("../img/icon-mail.svg");
     }
+  }
+
+  @media #{$desktop-widths} {
+    width: 315px;
   }
 }
 
@@ -142,27 +149,15 @@
 }
 
 .radio-btn {
-  margin-bottom: 13px;
-
   &::before {
     border-radius: 50%;
-  }
-
-  @media #{$tablet-widths} {
-    margin-bottom: 23px;
   }
 }
 
 
 .checkbox {
-  margin-bottom: 23px;
-
   &::before {
     border-radius: 5px;
-  }
-
-  @media #{$tablet-widths} {
-    margin-bottom: 30px;
   }
 }
 
