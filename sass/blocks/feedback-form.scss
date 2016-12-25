@@ -50,7 +50,7 @@
       padding: $tablet-padding;
       padding-right: 0;
       margin-bottom: 47px;
-      border: none;
+      @include grey-border (left);
     }
 
     &--contacts {
@@ -60,7 +60,6 @@
     &--impression {
       width: 50%;
       order: -1;
-      @include grey-border (right);
     }
 
     &--sights {
