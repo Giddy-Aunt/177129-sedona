@@ -14,6 +14,7 @@ var svgmin = require("gulp-svgmin");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
+var ghPages = require('gulp-gh-pages');
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -32,9 +33,11 @@ gulp.task("style", function() {
       })
     ]))
     .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
 
@@ -87,4 +90,9 @@ gulp.task("clean", function() {
 
 gulp.task("build", function(fn) {
   run("clean", "copy", "style", "images", "symbols", fn);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src("build/**/*")
+    .pipe(ghPages())
 });
